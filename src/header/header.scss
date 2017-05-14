@@ -1,4 +1,17 @@
 
-// nav.active /deep/ .collapse {
-//     display: block !important;
-// }
+$gutter: .4em;
+
+nav.navbar {
+    padding: 0;
+    background: slategrey;
+}
+
+
+/deep/ {
+    .navbar-brand, .navbar-toggler {
+        margin: 0;
+        padding: $gutter;
+        right: 0;
+    }
+
+}
