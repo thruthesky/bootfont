@@ -1,0 +1,25 @@
+{
+  "name": "bootfont",
+  "version": "0.0.1",
+  "description": "Bootstrap v4 + Font Awesome v4 + Angular2/4 Components",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thruthesky/bootfont.git"
+  },
+  "keywords": [
+    "bootstrap",
+    "font",
+    "awesome",
+    "angular"
+  ],
+  "author": "JaeHo Song",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thruthesky/bootfont/issues"
+  },
+  "homepage": "https://github.com/thruthesky/bootfont#readme"
+}
