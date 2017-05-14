@@ -59,17 +59,13 @@ Once bootfont library is imported, you can use its components.
 
 ## Development
 
-To generate all `*.js`, `*.d.ts` and `*.metadata.json` files:
+This is open source project and needs your help.
+If you have any comment, please use git issue.
+And if you want to improve this project, please do not hesitate to fork and pull request.
 
-```bash
-$ npm run build
-```
+When you edit code, please see the guide line of [generator-angular2-library](https://github.com/jvandemo/generator-angular2-library).
 
-To lint all `*.ts` files:
 
-```bash
-$ npm run lint
-```
 
 ## License
 
