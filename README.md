@@ -54,7 +54,7 @@ Once bootfont library is imported, you can use its components.
 <h1>
   {{title}}
 </h1>
-<abc-icon></abc-icon>
+<b-icon></b-icon>
 ```
 
 ## Development
@@ -74,9 +74,9 @@ MIT © [JaeHo Song](mailto:thruthesky@gmail.com)
 
 ## Components
 
-### abc-icon
+### b-icon
 
-`abc-icon` is a font-awesome stacked-icon.
+`b-icon` is a font-awesome stacked-icon.
 
 #### Options
 
@@ -84,7 +84,7 @@ MIT © [JaeHo Song](mailto:thruthesky@gmail.com)
 
 #### Examples
 ````
-<abc-icon name="home"></abc-icon>
+<b-icon name="home"></b-icon>
 ````
 
 
@@ -94,17 +94,17 @@ Design with CSS.
 
 globaly style.css)
 ````
-abc-icon[name="home"] .fa-stack-2x {
+b-icon[name="home"] .fa-stack-2x {
     color: slategrey;
 }
-abc-icon[name="home"] .fa-stack-1x {
+b-icon[name="home"] .fa-stack-1x {
     color: snow;
 }
 ````
 
 parent scss)
 ````
-:host /deep/ abc-icon[name="home"] {
+:host /deep/ b-icon[name="home"] {
     .fa-stack-2x {
         color: slategrey;
     }
@@ -117,9 +117,9 @@ parent scss)
 
 
 
-### abc-header
+### b-header
 
-`abc-header` component is simply a wrapper of bootstrap `navbar`.
+`b-header` component is simply a wrapper of bootstrap `navbar`.
 
 It is 
 
@@ -129,7 +129,7 @@ All the bootstrap rules apply.
 
 `break` is the break point where the break the menu as collapsable.
 ````
-<abc-header break="sm">
+<b-header break="sm">
 ````
 
 
@@ -139,9 +139,9 @@ The code below is a simple header template following bootstrap v4 `navbar` rules
 
 
 ````
-<abc-header break="sm">
-  <abc-icon name="bars" class="navbar-toggler navbar-toggler-right"></abc-icon>
-  <abc-icon name="home" class="navbar-brand"></abc-icon>
+<b-header break="sm">
+  <b-icon name="bars" class="navbar-toggler navbar-toggler-right"></b-icon>
+  <b-icon name="home" class="navbar-brand"></b-icon>
   <div class="navbar-collapse collapse">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
@@ -154,7 +154,7 @@ The code below is a simple header template following bootstrap v4 `navbar` rules
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
     </form>
   </div>
-</abc-header>
+</b-header>
 ````
 
 Example 2.
@@ -162,10 +162,10 @@ Example 2.
 See the variation of `navbar-brand`. It is just the same as Bootstrap v4 `navbar` rules.
 
 ````
-<abc-header break="sm">
-  <abc-icon name="bars" class="navbar-toggler navbar-toggler-right"></abc-icon>
+<b-header break="sm">
+  <b-icon name="bars" class="navbar-toggler navbar-toggler-right"></b-icon>
   <div class="navbar-brand">
-    <abc-icon name="home"></abc-icon>
+    <b-icon name="home"></b-icon>
     ABC
   </div>
   <div class="navbar-collapse collapse">
@@ -177,5 +177,5 @@ See the variation of `navbar-brand`. It is just the same as Bootstrap v4 `navbar
     </ul>
     ...
   </div>
-</abc-header>
+</b-header>
 ````
