@@ -188,11 +188,14 @@ See the variation of `navbar-brand`. It is just the same as Bootstrap v4 `navbar
 
 Example 3.
 
-Limiting max width of header
+Limit max-width of header and content as centered on `lg`.
+
+If you change the break point, you may need to change other break point attributes.
+
 
 template)
 ````
-<b-header break="sm">
+<b-header break="lg">
   <div class="container">
     <b-icon name="bars" class="navbar-toggler navbar-toggler-right"></b-icon>
     <div class="navbar-brand">
@@ -206,28 +209,61 @@ template)
       </ul>
       <ul class="navbar-nav">
         <li class="nav-item navbar-text ml-3">Login</li>
-        <li class="nav-item navbar-text ml-3 mr-4">Register</li>
+        <li class="nav-item navbar-text ml-3 mr-4 mr-lg-0">Register</li>
       </ul>
     </div>
   </div>
 </b-header>
+
+<div class="page-content p-2 px-lg-0">
+  <div class="jumbotron">
+    <h1 class="title display-3">Hi, I am ABC!</h1>
+    <p class="lead">
+      ...
+    </p>
+    <p>
+      ...
+    </p>
+  </div>
+
+  <p>
+    ...
+  </p>
+</div>
 ````
 
 
 
 global style.scss)
 ````
+$md: 768px;
 $lg: 992px;
-body {
-    margin-top: 68px;
-}
-.navbar .container {
+$header-height: 68px;
+@mixin page-width() {
+    padding-left: 0;
+    padding-right: 0;
     margin: 0;
-    padding: 0;
     width: 100%;
     @media ( min-width: $lg ) {
         margin: 0 auto;
         width: $lg;
+        .navbar-brand {
+            padding-left: 0;
+        }
     }
+}
+body {
+    margin-top: $header-height;
+}
+.navbar .container {
+    @include page-width();
+    @media ( max-width: $md ) {
+        .navbar-collapse {
+            background-color: lightslategrey;
+        }
+    }
+}
+.page-content {
+    @include page-width();
 }
 ````
