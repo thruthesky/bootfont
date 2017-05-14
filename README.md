@@ -74,6 +74,13 @@ MIT © [JaeHo Song](mailto:thruthesky@gmail.com)
 
 ## Components
 
+
+
+Bootfont components are built on Bootstrap v4 and Font Awesome and follows all the rules of them.
+
+So, when you are using bootfont, please be remindered that you can apply all the rules of Bootstrap v4 and Font Awesome.
+
+
 ### b-icon
 
 `b-icon` is a font-awesome stacked-icon.
@@ -140,20 +147,18 @@ The code below is a simple header template following bootstrap v4 `navbar` rules
 
 ````
 <b-header break="sm">
-  <b-icon name="bars" class="navbar-toggler navbar-toggler-right"></b-icon>
-  <b-icon name="home" class="navbar-brand"></b-icon>
-  <div class="navbar-collapse collapse">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-      ...
-    </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="text" placeholder="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
-  </div>
+    <b-icon class="navbar-toggler navbar-toggler-right" name="bars"></b-icon>
+    <b-icon class="navbar-brand" name="home"></b-icon>
+    <div class="collapse navbar-collapse">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item navbar-text ml-3">Home</li>
+            <li class="nav-item navbar-text ml-3">Blogs</li>
+        </ul>
+        <ul class="navbar-nav">
+            <li class="nav-item navbar-text ml-3">Login</li>
+            <li class="nav-item navbar-text ml-3 mr-4">Register</li>
+        </ul>
+    </div>
 </b-header>
 ````
 
@@ -178,4 +183,51 @@ See the variation of `navbar-brand`. It is just the same as Bootstrap v4 `navbar
     ...
   </div>
 </b-header>
+````
+
+
+Example 3.
+
+Limiting max width of header
+
+template)
+````
+<b-header break="sm">
+  <div class="container">
+    <b-icon name="bars" class="navbar-toggler navbar-toggler-right"></b-icon>
+    <div class="navbar-brand">
+      <b-icon name="home"></b-icon>
+      ABC
+    </div>
+    <div class="navbar-collapse collapse">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item navbar-text ml-3">Home</li>
+        <li class="nav-item navbar-text ml-3">Blogs</li>
+      </ul>
+      <ul class="navbar-nav">
+        <li class="nav-item navbar-text ml-3">Login</li>
+        <li class="nav-item navbar-text ml-3 mr-4">Register</li>
+      </ul>
+    </div>
+  </div>
+</b-header>
+````
+
+
+
+global style.scss)
+````
+$lg: 992px;
+body {
+    margin-top: 68px;
+}
+.navbar .container {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    @media ( min-width: $lg ) {
+        margin: 0 auto;
+        width: $lg;
+    }
+}
 ````
